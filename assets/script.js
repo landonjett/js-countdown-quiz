@@ -117,3 +117,13 @@ function updateTimer() {
     endQuiz();
   }
 }
+ // Function to end the quiz
+ function endQuiz() {
+  clearInterval(timer);
+  questionContainer.textContent = "Quiz Over!";
+  answerButtons.innerHTML = "";
+  resultDisplay.textContent = "";
+  scoreForm.classList.remove("hide");
+  highScoresContainer.classList.remove("hide");
+  restartButton.classList.remove("hide");
+}
