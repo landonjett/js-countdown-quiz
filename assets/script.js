@@ -96,3 +96,24 @@ function updateTimer() {
     endQuiz();
   }
 }
+
+ // Function to handle answer selection
+ function selectAnswer(event) {
+  const selectedAnswer = event.target.textContent;
+  const correctAnswer = questions[currentQuestionIndex].correctAnswer;
+
+  if (selectedAnswer === correctAnswer) {
+    resultDisplay.textContent = "Correct!";
+  } else {
+    resultDisplay.textContent = "Incorrect!";
+    timeRemaining -= 10; // Subtract 10 seconds for incorrect answer
+  }
+
+  currentQuestionIndex++;
+
+  if (currentQuestionIndex < questions.length) {
+    showQuestion(questions[currentQuestionIndex]);
+  } else {
+    endQuiz();
+  }
+}

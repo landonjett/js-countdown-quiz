@@ -32,3 +32,69 @@ h1 {
   margin-bottom: 20px;
   color: #c89666;
 }
+
+#question-container {
+  font-size: 18px;
+  margin: 20px 0;
+  color: #c89666;
+}
+
+#answer-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#timer {
+  font-weight: bold;
+  font-size: 40px;
+  color: #12343b;
+}
+
+.hide {
+  display: none;
+}
+
+#result {
+  margin-top: 20px;
+  font-size: 30px;
+  font-weight: bold;
+  color:  #c89666;
+}
+
+#score-form {
+  margin-top: 20px;
+}
+
+#score-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+#high-scores {
+  margin-top: 20px;
+}
+
+#clear-scores {
+  background-color: #12343b;
+  color: #c89666;
+  padding: 5px 10px;
+  margin-top: 10px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+}
+
+li {
+
+  background-color: #12343b;
+  color: #c89666;
+}
+
+label {
+  color: #c89666;
+}
+
+h2 {
+color: #c89666;
+}
