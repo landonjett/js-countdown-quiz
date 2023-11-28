@@ -15,3 +15,20 @@ body {
   box-shadow: 0 0 10px #c89666;
 }
 
+#timer-container {
+  margin-top: 20px;
+}
+
+button {
+  font-size: 16px;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  color: #c89666;
+  background-color:  #12343b;
+}
+
+h1 {
+  font-size: 40px;
+  margin-bottom: 20px;
+  color: #c89666;
+}
