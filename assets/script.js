@@ -127,3 +127,48 @@ function updateTimer() {
   highScoresContainer.classList.remove("hide");
   restartButton.classList.remove("hide");
 }
+
+ // Function to save the score
+ function saveScore(event) {
+  event.preventDefault();
+  const initials = initialsInput.value.toUpperCase();
+  const score = timeRemaining;
+
+  // Save score to local storage or any other desired storage method
+  // You can implement this part based on your requirements
+
+  // Display the scores
+  const scoreItem = document.createElement("li");
+  scoreItem.textContent = `${initials}: ${score}`;
+  scoreList.appendChild(scoreItem);
+
+  // Hide the form after saving the score
+  scoreForm.classList.add("hide");
+}
+
+// Function to clear high scores
+function clearScores() {
+  // Clear scores from local storage or any other storage method
+  // You can implement this part based on your requirements
+
+  // Clear the displayed scores
+  scoreList.innerHTML = "";
+}
+
+const restartButton = document.createElement("button");
+restartButton.textContent = "Restart Quiz";
+restartButton.classList.add("btn", "hide");
+restartButton.addEventListener("click", restartQuiz);
+document.getElementById("quiz-container").appendChild(restartButton);
+
+function restartQuiz() {
+  currentQuestionIndex = 0;
+  timeRemaining = 30; // Reset the timer
+  showQuestion(questions[currentQuestionIndex]);
+  resultDisplay.textContent = "";
+  scoreForm.classList.add("hide");
+  highScoresContainer.classList.add("hide");
+  restartButton.classList.add("hide");
+  startQuiz();
+}
+
