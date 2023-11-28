@@ -6,3 +6,28 @@
   <link rel="stylesheet" href="./assets/style.css">
   <title>Coding Quiz</title>
 </head>
+
+<body>
+  <div id="quiz-container">
+    <h1>Coding Quiz</h1>
+    <button id="start-button">Start Quiz</button>
+    <div id="question-container"></div>
+    <div id="answer-buttons" class="hide"></div>
+    <div id="result"></div>
+    <form id="score-form" class="hide">
+      <label for="initials">Enter your initials:</label>
+      <input type="text" id="initials" name="initials" maxlength="3">
+      <button type="submit">Submit</button>
+    </form>
+    <div id="high-scores" class="hide">
+      <h2>High Scores</h2>
+      <ul id="score-list"></ul>
+      <button id="clear-scores">Clear Scores</button>
+    </div>
+  </div>
+  <div id="timer-container">
+    <div id="timer">Time: <span id="time">0</span></div>
+  </div>
+  <script src="./assets/script.js"></script>
+</body>
+</html>
